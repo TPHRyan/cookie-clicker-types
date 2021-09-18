@@ -54,6 +54,10 @@ declare class Game {
     hook: (cookiesPerClick: number) => number,
   ): void;
   registerHook(name: "cps", hook: (cps: number) => number): void;
+  registerHook(
+    name: "cookiesPerClick" | "cps",
+    hook: (rate: number) => number,
+  ): void;
   registerHook(name: "reset", hook: (hardReset: boolean) => void): void;
   registerHook(name: "ticker", hook: () => string[]): void;
   registerHook(
