@@ -37,4 +37,7 @@ interface Game {
 	 */
 	ShowMenu(menuName?: string): void;
 	UpdateMenu(): void;
+
+	UpdateTicker(): void;
+	getNewTicker(manual?: boolean): string;
 }
