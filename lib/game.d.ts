@@ -1,5 +1,6 @@
 /// <reference path="./common.d.ts" />
 /// <reference path="./game-methods.d.ts" />
+/// <reference path="./game-properties.d.ts" />
 /// <reference path="./objects.d.ts" />
 
 interface CookieClickerMod extends HandleSave {
