@@ -1,0 +1,40 @@
+{
+	"name": "cookie-clicker-types",
+	"version": "0.1.0",
+	"description": "Types for the Cookie Clicker Javascript API",
+	"keywords": [
+		"cookie-clicker",
+		"clicker",
+		"idlegame",
+		"typescript"
+	],
+	"files": [
+		"lib",
+		"package.json",
+		"tsconfig.json",
+		"yarn.lock",
+		".editorconfig",
+		".yarnrc.yml"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TPHRyan/cookie-clicker-types.git"
+	},
+	"bugs": {
+		"url": "https://github.com/TPHRyan/cookie-clicker-types/issues"
+	},
+	"license": "MIT",
+	"main": "lib/index.d.ts",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"typecheck": "tsc -p tsconfig.json"
+	},
+	"devDependencies": {
+		"prettier": "^2.4.1",
+		"typescript": "^4.4.3"
+	},
+	"peerDependencies": {
+		"typescript": ">=3.9.10"
+	},
+	"packageManager": "yarn@3.0.2"
+}
