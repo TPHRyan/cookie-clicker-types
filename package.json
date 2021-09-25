@@ -12,9 +12,7 @@
 		"lib",
 		"package.json",
 		"tsconfig.json",
-		"yarn.lock",
-		".editorconfig",
-		".yarnrc.yml"
+		".editorconfig"
 	],
 	"repository": {
 		"type": "git",
