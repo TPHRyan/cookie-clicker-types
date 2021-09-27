@@ -10,7 +10,7 @@ declare namespace StockMarketMinigame {
 
 	interface Office {
 		name: string;
-		icon: IconPosition;
+		icon: CookieClicker.Icon;
 		cost: [cursors: number, cursorLevel: number];
 		desc: string;
 	}

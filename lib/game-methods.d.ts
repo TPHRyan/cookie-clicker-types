@@ -2,15 +2,24 @@ type PromptOption = [label: string] | [label: string, onClickStr: string];
 
 interface Game {
 	LoadMod(url: string): void;
+
+	// Core game methods
+	Load(): void;
+	Launch(): void;
+	Init(): void;
+	Loop(): void;
+	Logic(): void;
+	Draw(): void;
+
+	// UI methods
 	Notify(
 		title: string,
 		description: string,
-		icon?: number | unknown[],
+		icon?: CookieClicker.Icon,
 		quick?: number,
 
 		noLog?: boolean,
 	): void;
-
 	/**
 	 * Prompt the user to make a decision.
 	 * @param {string} content The content for the dialog box (interpreted as HTML)
@@ -29,7 +38,6 @@ interface Game {
 		className?: string,
 	): void;
 	ClosePrompt(): void;
-
 	/**
 	 * Shows/hides the specified menu.
 	 * @param {?string} menuName If no menu or the current menu is specified, closes the current menu.
@@ -38,6 +46,11 @@ interface Game {
 	ShowMenu(menuName?: string): void;
 	UpdateMenu(): void;
 
+	// Gameplay methods
 	UpdateTicker(): void;
 	getNewTicker(manual?: boolean): string;
+
+	Ascend(bypass?: boolean): void;
+	HardReset(bypass?: 0 | 1 | 2): void;
+	Reincarnate(bypass?: boolean): void;
 }

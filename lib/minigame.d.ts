@@ -1,6 +1,6 @@
 /// <reference path="./common.d.ts" />
 
-interface Minigame extends HandleReset, HandleSave {
+interface Minigame extends CookieClicker.CanReset, CookieClicker.CanSave {
 	draw(): void;
 	launch(): void;
 	logic(): void;
@@ -8,6 +8,6 @@ interface Minigame extends HandleReset, HandleSave {
 	onLevel?(): void;
 	onResize?(): void;
 
-	effs: Effects;
+	effs: CookieClicker.Effects;
 	name: string;
 }

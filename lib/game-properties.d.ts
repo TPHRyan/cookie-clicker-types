@@ -20,6 +20,9 @@ interface Game {
 	season: "valentines" | "fools" | "easter" | "halloween" | "christmas";
 	wrinklers: Wrinkler[];
 
+	// A special field containing the last entity to be added the game.
+	last: 0 | Game.Achievement | Game.Object;
+
 	fps: number;
 	currentFps: number;
 	previousFps: number;
@@ -31,4 +34,9 @@ interface Game {
 	lumpT: number;
 	pledgeT: number;
 	researchT: number;
+
+	AscendTimer: number;
+	AscendDuration: number;
+	ReincarnateTimer: number;
+	ReincarnateDuration: number;
 }

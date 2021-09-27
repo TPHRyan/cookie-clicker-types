@@ -1,14 +1,15 @@
+/// <reference path="./buildings.d.ts" />
 /// <reference path="./common.d.ts" />
+/// <reference path="./collectible/index.d.ts" />
 /// <reference path="./game-methods.d.ts" />
 /// <reference path="./game-properties.d.ts" />
-/// <reference path="./objects.d.ts" />
 
-interface CookieClickerMod extends HandleSave {
+interface CookieClickerMod extends CookieClicker.CanSave {
 	[key: string]: unknown;
 	init(): void;
 }
 
-interface Game extends HandleReset {}
+interface Game extends CookieClicker.CanReset {}
 
 declare class Game {
 	[key: string]: unknown;
@@ -21,27 +22,6 @@ declare class Game {
 	onMenu: "prefs" | "main" | "log" | "stats" | "";
 	ready?: boolean;
 	vanilla: 0 | 1;
-
-	Objects: Record<string, Game.Object> & {
-		Cursor: Game.Cursor;
-		Grandma: Game.Grandma;
-		Farm: Game.Farm;
-		Mine: Game.Mine;
-		Factory: Game.Factory;
-		Bank: Game.Bank;
-		Temple: Game.Temple;
-		WizardTower: Game.WizardTower;
-		Shipment: Game.Shipment;
-		"Alchemy lab": Game.AlchemyLab;
-		Portal: Game.Portal;
-		"Time machine": Game.TimeMachine;
-		"Antimatter condenser": Game.AntimatterCondenser;
-		Prism: Game.Prism;
-		Chancemaker: Game.Chancemaker;
-		"Fractal engine": Game.FractalEngine;
-		"Javascript console": Game.JavascriptConsole;
-		Idleverse: Game.Idleverse;
-	};
 
 	isMinigameReady(forObject: Game.Object): boolean;
 	registerHook(
